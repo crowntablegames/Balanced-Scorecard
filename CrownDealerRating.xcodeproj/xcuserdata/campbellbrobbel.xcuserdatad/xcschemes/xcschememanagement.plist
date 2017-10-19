@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CrownDealerRating.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>JBChart.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>76998BBC1F38B7A2000854FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76998BC41F38B7A2000854FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76FF994B1F05FDD400F3C477</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76FF995F1F05FDD400F3C477</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76FF996A1F05FDD400F3C477</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
