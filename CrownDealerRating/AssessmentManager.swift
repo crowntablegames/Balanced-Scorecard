@@ -43,7 +43,7 @@ public class AssessmentManager {
         */
         let qDict : NSDictionary = ["query" : queryString]
         
-        NetworkManager.post(jsonObject: qDict, toURLPath: self.serverURLString) {_ in 
+        NetworkManager.shared.post(jsonObject: qDict, toURLPath: self.serverURLString) {_ in
             print(self.assessments.count)
             for assessment in assessments {
                 self.assessments.append(assessment)
@@ -66,7 +66,7 @@ public class AssessmentManager {
         
         print("first sem wait")
 
-        NetworkManager.post(jsonObject: assessmentTypePostDictionary, toURLPath: self.serverURLString) { data, error in
+        NetworkManager.shared.post(jsonObject: assessmentTypePostDictionary, toURLPath: self.serverURLString) { data, error in
             
             if error != nil {
                 print("First Sem Error")
@@ -100,7 +100,7 @@ public class AssessmentManager {
             print("second sem wait")
             let queryDictionary : NSDictionary = ["query" : "select a1.greaterDealer, a1.improvementDealer, a1.assessmentTypeID, d1.firstName greaterDealerFirstName, d1.lastName greaterDealerLastName, d1.area greaterDealerArea, d2.firstName improvementDealerFirstName, d2.lastName improvementDealerLastName, d2.area improvementDealerArea from Assessment a1 left join Dealer d1 ON d1.dealerID = a1.greaterDealer left join Dealer d2 ON d2.dealerID = a1.improvementDealer"]
             
-            NetworkManager.post(jsonObject: queryDictionary, toURLPath: self.serverURLString) { data, error in
+            NetworkManager.shared.post(jsonObject: queryDictionary, toURLPath: self.serverURLString) { data, error in
                 print("2nd Post")
 
                 if error != nil {

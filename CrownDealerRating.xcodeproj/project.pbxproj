@@ -201,7 +201,7 @@
 		76B5F2F11F06731A0040EA73 /* DealerImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerImageButton.swift; sourceTree = "<group>"; };
 		76E5F7D51F28E4970081E180 /* DealerDatabaseQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDatabaseQuery.swift; sourceTree = "<group>"; };
 		76F0490B1F1334C500F3934E /* DealerDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDatabaseModel.swift; sourceTree = "<group>"; };
-		76F049131F14946400F3934E /* playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = playground.playground; sourceTree = "<group>"; };
+		76F049131F14946400F3934E /* playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76FF994C1F05FDD400F3C477 /* CrownDealerRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrownDealerRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FF994F1F05FDD400F3C477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76FF99511F05FDD400F3C477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +288,7 @@
 		760D16861F1870490067317A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76CD8E331FA21415000E5357 /* Assessment Ladder */,
 				76EC25FC1F61231B001E2FB4 /* Networking */,
 				76EC25FB1F61230F001E2FB4 /* Casino Model */,
 				76EC25FA1F6122F8001E2FB4 /* Assessment */,
@@ -384,6 +385,13 @@
 				76EC25F71F611ED6001E2FB4 /* Nearby Table VCs */,
 			);
 			name = "Home Split View Controller";
+			sourceTree = "<group>";
+		};
+		76CD8E331FA21415000E5357 /* Assessment Ladder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Assessment Ladder";
 			sourceTree = "<group>";
 		};
 		76EC25F61F611EA0001E2FB4 /* Area Manager Assessment VCs */ = {
@@ -1048,7 +1056,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q33SL6S6SN;
 				INFOPLIST_FILE = CrownDealerRating/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJ.CrownDealerRating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1063,7 +1071,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q33SL6S6SN;
 				INFOPLIST_FILE = CrownDealerRating/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJ.CrownDealerRating;
 				PRODUCT_NAME = "$(TARGET_NAME)";

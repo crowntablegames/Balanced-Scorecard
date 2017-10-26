@@ -11,11 +11,14 @@ import UserNotifications
 
 class NetworkManager {
     
-    init() {
+    static public var shared = NetworkManager()
+    private init() {
         
     }
     
-    public static func post(jsonObject : NSDictionary, toURLPath : String,  completion: @escaping (_ data : Data?, _ error : Error?) -> Void) {
+ 
+    
+    public func post(jsonObject : NSDictionary, toURLPath : String,  completion: @escaping (_ data : Data?, _ error : Error?) -> Void) {
         let url: URL = URL(string: toURLPath)!
         var request : URLRequest = URLRequest(url: url)
         request.httpMethod = "POST"

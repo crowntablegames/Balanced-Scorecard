@@ -42,7 +42,7 @@ class NearbyDealersViewController: UIViewController, UITableViewDataSource, UITa
         
         do {
             let dictionary : NSDictionary = try ["query" : selectQuery.asString()]
-            NetworkManager.post(jsonObject: dictionary, toURLPath: "http://saturn.csit.rmit.edu.au/~s3459784/DatabaseTesting/dealerDatabase.php") {
+            NetworkManager.shared.post(jsonObject: dictionary, toURLPath: "http://saturn.csit.rmit.edu.au/~s3459784/DatabaseTesting/dealerDatabase.php") {
                 data, error in
                
                 if data != nil {

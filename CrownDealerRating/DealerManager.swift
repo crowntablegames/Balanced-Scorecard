@@ -27,7 +27,7 @@ class DealerManager {
         
         do {
             let dictionary : NSDictionary = try ["query" : selectQuery.asString()]
-            NetworkManager.post(jsonObject: dictionary, toURLPath: "http://18.221.45.138/dealerDatabase.php") {
+            NetworkManager.shared.post(jsonObject: dictionary, toURLPath: "http://18.221.45.138/dealerDatabase.php") {
                 data, error in
                 
                 if error != nil {
