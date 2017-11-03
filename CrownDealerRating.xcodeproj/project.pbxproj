@@ -31,6 +31,7 @@
 		763F976E1F621D3300777E71 /* ManagerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763F976D1F621D3300777E71 /* ManagerInfoTableViewCell.swift */; };
 		764561FF1F4589C600BA6776 /* ResultsDealerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764561FE1F4589C600BA6776 /* ResultsDealerInfoTableViewCell.swift */; };
 		76530B651F453157002E3696 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A997D21F08D45500DD0DDB /* Assessment.swift */; };
+		7663555E1FA7279700457FFD /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7663555D1FA7279700457FFD /* AVLTree.swift */; };
 		766AB9DB1F2E2D87000248E3 /* DealerOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766AB9DA1F2E2D87000248E3 /* DealerOptionViewController.swift */; };
 		76998BB11F37699F000854FE /* JoinClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761873401F34EC6300342A53 /* JoinClause.swift */; };
 		76998BB31F382EDF000854FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76998BB21F382EDF000854FE /* NetworkManager.swift */; };
@@ -73,6 +74,8 @@
 		76B5F2EA1F063E230040EA73 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5F2E91F063E230040EA73 /* RatingViewController.swift */; };
 		76B5F2EC1F066A2A0040EA73 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5F2EB1F066A2A0040EA73 /* AssessmentViewController.swift */; };
 		76B5F2F21F06731A0040EA73 /* DealerImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5F2F11F06731A0040EA73 /* DealerImageButton.swift */; };
+		76C9E2071FAC3861003E3852 /* BSTBalancedTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C9E2061FAC3861003E3852 /* BSTBalancedTree.swift */; };
+		76CD8E351FA220FB000E5357 /* Ladder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD8E341FA220FB000E5357 /* Ladder.swift */; };
 		76E5F7D61F28E4970081E180 /* DealerDatabaseQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E5F7D51F28E4970081E180 /* DealerDatabaseQuery.swift */; };
 		76F0490C1F1334C500F3934E /* DealerDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0490B1F1334C500F3934E /* DealerDatabaseModel.swift */; };
 		76F049111F13407900F3934E /* DealerDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0490B1F1334C500F3934E /* DealerDatabaseModel.swift */; };
@@ -158,6 +161,7 @@
 		762DE7751F45D0680017BCA2 /* DealerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerManager.swift; sourceTree = "<group>"; };
 		763F976D1F621D3300777E71 /* ManagerInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerInfoTableViewCell.swift; sourceTree = "<group>"; };
 		764561FE1F4589C600BA6776 /* ResultsDealerInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDealerInfoTableViewCell.swift; sourceTree = "<group>"; };
+		7663555D1FA7279700457FFD /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		766AB9DA1F2E2D87000248E3 /* DealerOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerOptionViewController.swift; sourceTree = "<group>"; };
 		76998BB21F382EDF000854FE /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		76998BBD1F38B7A2000854FE /* JBChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +203,8 @@
 		76B5F2E91F063E230040EA73 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		76B5F2EB1F066A2A0040EA73 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
 		76B5F2F11F06731A0040EA73 /* DealerImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerImageButton.swift; sourceTree = "<group>"; };
+		76C9E2061FAC3861003E3852 /* BSTBalancedTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTBalancedTree.swift; sourceTree = "<group>"; };
+		76CD8E341FA220FB000E5357 /* Ladder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ladder.swift; sourceTree = "<group>"; };
 		76E5F7D51F28E4970081E180 /* DealerDatabaseQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDatabaseQuery.swift; sourceTree = "<group>"; };
 		76F0490B1F1334C500F3934E /* DealerDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDatabaseModel.swift; sourceTree = "<group>"; };
 		76F049131F14946400F3934E /* playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -390,6 +396,9 @@
 		76CD8E331FA21415000E5357 /* Assessment Ladder */ = {
 			isa = PBXGroup;
 			children = (
+				76CD8E341FA220FB000E5357 /* Ladder.swift */,
+				7663555D1FA7279700457FFD /* AVLTree.swift */,
+				76C9E2061FAC3861003E3852 /* BSTBalancedTree.swift */,
 			);
 			name = "Assessment Ladder";
 			sourceTree = "<group>";
@@ -793,13 +802,16 @@
 				76047FB31F34A133008B1775 /* DatabaseQueryGenerator.swift in Sources */,
 				76B5F2EA1F063E230040EA73 /* RatingViewController.swift in Sources */,
 				76A997D31F08D45500DD0DDB /* Assessment.swift in Sources */,
+				76CD8E351FA220FB000E5357 /* Ladder.swift in Sources */,
 				76054C691F3B6592002A8ADA /* AssessmentManager.swift in Sources */,
+				76C9E2071FAC3861003E3852 /* BSTBalancedTree.swift in Sources */,
 				76A997D51F08D5C800DD0DDB /* AssessmentPageViewController.swift in Sources */,
 				762DE7761F45D0680017BCA2 /* DealerManager.swift in Sources */,
 				760D168D1F1897860067317A /* SubmitTableViewCell.swift in Sources */,
 				76E5F7D61F28E4970081E180 /* DealerDatabaseQuery.swift in Sources */,
 				76998BFA1F38D530000854FE /* AssessmentResultGraphTableViewCell.swift in Sources */,
 				76047FB61F34A187008B1775 /* DatabaseQuery.swift in Sources */,
+				7663555E1FA7279700457FFD /* AVLTree.swift in Sources */,
 				76FF99801F0629C700F3C477 /* Table.swift in Sources */,
 				769D05621F2DC918003A2D6E /* MasterViewController.swift in Sources */,
 				76FF997E1F0629A200F3C477 /* Dealer.swift in Sources */,

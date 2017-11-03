@@ -11,19 +11,19 @@ import Foundation
 /* This class is made to represent information regarding a Table Games
     table. 
  */
-class Table {
+public class Table {
     
     var tableNumber : NSNumber?
     var gameType : GameType?
     var dealer : Dealer?
     
-    init(tableNumber: NSNumber, gameType : GameType, dealer : Dealer) {
+    public init(tableNumber: NSNumber, gameType : GameType, dealer : Dealer) {
         self.tableNumber = tableNumber
         self.gameType = gameType
         self.dealer = dealer
     }
     
-    init(tableDictionary : NSDictionary) {
+    public init(tableDictionary : NSDictionary) {
         let tableNumber = Int(tableDictionary.value(forKey: "tableNumber") as! String)
         self.tableNumber = NSNumber(value: tableNumber!)
         let gameType = tableDictionary.value(forKey: "gameType") as! String
