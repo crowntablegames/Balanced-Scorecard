@@ -30,7 +30,7 @@ class AddDealerNavigationViewController: UINavigationController {
         self.navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissSelf)), animated: true)
     }
     
-    func dismissSelf() {
+    @objc func dismissSelf() {
         self.dismiss(animated: true, completion: nil)
     }
 

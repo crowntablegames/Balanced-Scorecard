@@ -18,7 +18,12 @@ public class AssessmentManager {
     public private(set) var assessmentGroups : [String] = ["Managing Self", "Accountability", "Service", "Communication", "Teamwork"]
    
     init() {
-
+        let sem = DispatchSemaphore(value: 0)
+        self.downloadAssessmentTypes(completion: { error in
+            
+           sem.signal()
+        })
+        sem.wait()
     }
     
     /**
@@ -43,7 +48,7 @@ public class AssessmentManager {
         */
         let qDict : NSDictionary = ["query" : queryString]
         
-        NetworkManager.shared.post(jsonObject: qDict, toURLPath: self.serverURLString) {_ in
+        NetworkManager.shared.post(jsonObject: qDict, toURLPath: self.serverURLString) {_,_  in
             print(self.assessments.count)
             for assessment in assessments {
                 self.assessments.append(assessment)
@@ -56,6 +61,28 @@ public class AssessmentManager {
         return true
     }
     
+    private func downloadAssessmentTypes(completion : @escaping (_ error : Error?) -> Void) {
+        let assessmentTypePostDictionary : NSDictionary = ["query" : "select * from AssessmentType"]
+        NetworkManager.shared.post(jsonObject: assessmentTypePostDictionary, toURLPath: self.serverURLString) { data, error in
+            
+            if error != nil {
+                completion(error)
+                return
+            }
+            else {
+                do {
+                    self.assessmentTypes = try JSONDecoder().decode([AssessmentType].self, from: data!)
+                    completion(nil)
+                }
+                catch let error {
+                    print("Assessment Type Error")
+                    print(error.localizedDescription)
+                }
+              
+                
+            }
+        }
+    }
     
     /// Downloads all assessments.
     public func downloadAllAssessments(completion : @escaping (_ error : Error?) -> Void) {
@@ -220,8 +247,7 @@ public class AssessmentManager {
     
     func averageScoreFor(area : Area, with assessmentType : AssessmentType) -> Float {
         // TO DO
-        
-        let score = Float(arc4random_uniform(UInt32(100)))/100
+    
         return 0.5
     }
     
@@ -295,7 +321,7 @@ public class AssessmentManager {
         return assessmentCount
     }
     
-    public struct AssessmentType {
+    public struct AssessmentType : Decodable {
         
         private(set) var id : Int
         private(set) var type : String

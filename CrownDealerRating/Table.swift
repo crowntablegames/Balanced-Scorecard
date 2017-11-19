@@ -17,7 +17,7 @@ public class Table {
     var gameType : GameType?
     var dealer : Dealer?
     
-    public init(tableNumber: NSNumber, gameType : GameType, dealer : Dealer) {
+    init(tableNumber: NSNumber, gameType : GameType, dealer : Dealer) {
         self.tableNumber = tableNumber
         self.gameType = gameType
         self.dealer = dealer

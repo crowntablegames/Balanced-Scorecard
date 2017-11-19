@@ -312,10 +312,10 @@ extension AVLTree {
     public func inorderArray(node: Node?) -> [Node] {
         var nodeArray : [Node] = []
         if let node = node {
-            var leftTreeArray = inorderArray(node: node.leftChild)
+            let leftTreeArray = inorderArray(node: node.leftChild)
             nodeArray.append(contentsOf: leftTreeArray)
             nodeArray.append(node)
-            var rightTreeArray = inorderArray(node: node.rightChild)
+            let rightTreeArray = inorderArray(node: node.rightChild)
             nodeArray.append(contentsOf: rightTreeArray)
         }
         return nodeArray

@@ -30,9 +30,18 @@
 		762DE7761F45D0680017BCA2 /* DealerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762DE7751F45D0680017BCA2 /* DealerManager.swift */; };
 		763F976E1F621D3300777E71 /* ManagerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763F976D1F621D3300777E71 /* ManagerInfoTableViewCell.swift */; };
 		764561FF1F4589C600BA6776 /* ResultsDealerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764561FE1F4589C600BA6776 /* ResultsDealerInfoTableViewCell.swift */; };
+		76482ABE1FC1A63500DD823C /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76482ABD1FC1A63500DD823C /* MyProfileViewController.swift */; };
+		7652DB8C1FBA56ED00A77737 /* AssessmentTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7652DB8B1FBA56ED00A77737 /* AssessmentTypeTableViewController.swift */; };
+		7652DB8E1FBAFB4C00A77737 /* AssessmentLadderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7652DB8D1FBAFB4C00A77737 /* AssessmentLadderViewController.swift */; };
 		76530B651F453157002E3696 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A997D21F08D45500DD0DDB /* Assessment.swift */; };
+		76560A0D1FB8661600B61B55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76560A0C1FB8661600B61B55 /* LoginViewController.swift */; };
+		76560A0F1FB893D100B61B55 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76560A0E1FB893D100B61B55 /* MainMenuViewController.swift */; };
+		76560A111FB89D6B00B61B55 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76560A101FB89D6B00B61B55 /* EmployeeTableViewCell.swift */; };
+		76560A131FB8A19100B61B55 /* SelectAssessmentByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76560A121FB8A19100B61B55 /* SelectAssessmentByViewController.swift */; };
+		765F30281FB96ADD0072619D /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765F30271FB96ADD0072619D /* EmployeeTableViewController.swift */; };
 		7663555E1FA7279700457FFD /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7663555D1FA7279700457FFD /* AVLTree.swift */; };
 		766AB9DB1F2E2D87000248E3 /* DealerOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766AB9DA1F2E2D87000248E3 /* DealerOptionViewController.swift */; };
+		768161841FB33D6A009D80FF /* AssessmentLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768161831FB33D6A009D80FF /* AssessmentLadder.swift */; };
 		76998BB11F37699F000854FE /* JoinClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761873401F34EC6300342A53 /* JoinClause.swift */; };
 		76998BB31F382EDF000854FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76998BB21F382EDF000854FE /* NetworkManager.swift */; };
 		76998BB41F382EDF000854FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76998BB21F382EDF000854FE /* NetworkManager.swift */; };
@@ -69,13 +78,15 @@
 		769D055D1F2D96FA003A2D6E /* SQLDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D055C1F2D96FA003A2D6E /* SQLDatabaseManager.swift */; };
 		769D055F1F2DC7FB003A2D6E /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D055E1F2DC7FB003A2D6E /* MainSplitViewController.swift */; };
 		769D05621F2DC918003A2D6E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D05611F2DC918003A2D6E /* MasterViewController.swift */; };
+		76A2AE0D1FC1ABAD0069A382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76FF99531F05FDD400F3C477 /* Main.storyboard */; };
+		76A2AE0E1FC1ABB60069A382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76FF99531F05FDD400F3C477 /* Main.storyboard */; };
 		76A997D31F08D45500DD0DDB /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A997D21F08D45500DD0DDB /* Assessment.swift */; };
 		76A997D51F08D5C800DD0DDB /* AssessmentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A997D41F08D5C800DD0DDB /* AssessmentPageViewController.swift */; };
 		76B5F2EA1F063E230040EA73 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5F2E91F063E230040EA73 /* RatingViewController.swift */; };
 		76B5F2EC1F066A2A0040EA73 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5F2EB1F066A2A0040EA73 /* AssessmentViewController.swift */; };
 		76B5F2F21F06731A0040EA73 /* DealerImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B5F2F11F06731A0040EA73 /* DealerImageButton.swift */; };
 		76C9E2071FAC3861003E3852 /* BSTBalancedTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C9E2061FAC3861003E3852 /* BSTBalancedTree.swift */; };
-		76CD8E351FA220FB000E5357 /* Ladder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD8E341FA220FB000E5357 /* Ladder.swift */; };
+		76CD8E351FA220FB000E5357 /* BSTLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CD8E341FA220FB000E5357 /* BSTLadder.swift */; };
 		76E5F7D61F28E4970081E180 /* DealerDatabaseQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E5F7D51F28E4970081E180 /* DealerDatabaseQuery.swift */; };
 		76F0490C1F1334C500F3934E /* DealerDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0490B1F1334C500F3934E /* DealerDatabaseModel.swift */; };
 		76F049111F13407900F3934E /* DealerDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0490B1F1334C500F3934E /* DealerDatabaseModel.swift */; };
@@ -161,8 +172,17 @@
 		762DE7751F45D0680017BCA2 /* DealerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerManager.swift; sourceTree = "<group>"; };
 		763F976D1F621D3300777E71 /* ManagerInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerInfoTableViewCell.swift; sourceTree = "<group>"; };
 		764561FE1F4589C600BA6776 /* ResultsDealerInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsDealerInfoTableViewCell.swift; sourceTree = "<group>"; };
+		76482ABD1FC1A63500DD823C /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		7652DB8B1FBA56ED00A77737 /* AssessmentTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentTypeTableViewController.swift; sourceTree = "<group>"; };
+		7652DB8D1FBAFB4C00A77737 /* AssessmentLadderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentLadderViewController.swift; sourceTree = "<group>"; };
+		76560A0C1FB8661600B61B55 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		76560A0E1FB893D100B61B55 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		76560A101FB89D6B00B61B55 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		76560A121FB8A19100B61B55 /* SelectAssessmentByViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAssessmentByViewController.swift; sourceTree = "<group>"; };
+		765F30271FB96ADD0072619D /* EmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewController.swift; sourceTree = "<group>"; };
 		7663555D1FA7279700457FFD /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		766AB9DA1F2E2D87000248E3 /* DealerOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerOptionViewController.swift; sourceTree = "<group>"; };
+		768161831FB33D6A009D80FF /* AssessmentLadder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentLadder.swift; sourceTree = "<group>"; };
 		76998BB21F382EDF000854FE /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		76998BBD1F38B7A2000854FE /* JBChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76998BBF1F38B7A2000854FE /* JBChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBChart.h; sourceTree = "<group>"; };
@@ -204,10 +224,9 @@
 		76B5F2EB1F066A2A0040EA73 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
 		76B5F2F11F06731A0040EA73 /* DealerImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerImageButton.swift; sourceTree = "<group>"; };
 		76C9E2061FAC3861003E3852 /* BSTBalancedTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTBalancedTree.swift; sourceTree = "<group>"; };
-		76CD8E341FA220FB000E5357 /* Ladder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ladder.swift; sourceTree = "<group>"; };
+		76CD8E341FA220FB000E5357 /* BSTLadder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTLadder.swift; sourceTree = "<group>"; };
 		76E5F7D51F28E4970081E180 /* DealerDatabaseQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDatabaseQuery.swift; sourceTree = "<group>"; };
 		76F0490B1F1334C500F3934E /* DealerDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealerDatabaseModel.swift; sourceTree = "<group>"; };
-		76F049131F14946400F3934E /* playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		76FF994C1F05FDD400F3C477 /* CrownDealerRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrownDealerRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FF994F1F05FDD400F3C477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76FF99511F05FDD400F3C477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +325,7 @@
 		760D16871F1870730067317A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				76560A0B1FB865D900B61B55 /* VC Hierarchy */,
 				76EC25F91F611F88001E2FB4 /* View Controller Hierarchy */,
 				76998BF81F38D4A7000854FE /* Buttons */,
 				76EC25F81F611F11001E2FB4 /* Cells */,
@@ -321,6 +341,21 @@
 				760D168E1F18BD040067317A /* AddDealerNavigationViewController.swift */,
 			);
 			name = AddDealerViews;
+			sourceTree = "<group>";
+		};
+		76560A0B1FB865D900B61B55 /* VC Hierarchy */ = {
+			isa = PBXGroup;
+			children = (
+				76560A0C1FB8661600B61B55 /* LoginViewController.swift */,
+				76560A0E1FB893D100B61B55 /* MainMenuViewController.swift */,
+				7652DB8B1FBA56ED00A77737 /* AssessmentTypeTableViewController.swift */,
+				765F30271FB96ADD0072619D /* EmployeeTableViewController.swift */,
+				76560A101FB89D6B00B61B55 /* EmployeeTableViewCell.swift */,
+				76560A121FB8A19100B61B55 /* SelectAssessmentByViewController.swift */,
+				76482ABD1FC1A63500DD823C /* MyProfileViewController.swift */,
+				7652DB8D1FBAFB4C00A77737 /* AssessmentLadderViewController.swift */,
+			);
+			name = "VC Hierarchy";
 			sourceTree = "<group>";
 		};
 		76998BBE1F38B7A2000854FE /* JBChart */ = {
@@ -396,9 +431,10 @@
 		76CD8E331FA21415000E5357 /* Assessment Ladder */ = {
 			isa = PBXGroup;
 			children = (
-				76CD8E341FA220FB000E5357 /* Ladder.swift */,
+				76CD8E341FA220FB000E5357 /* BSTLadder.swift */,
 				7663555D1FA7279700457FFD /* AVLTree.swift */,
 				76C9E2061FAC3861003E3852 /* BSTBalancedTree.swift */,
+				768161831FB33D6A009D80FF /* AssessmentLadder.swift */,
 			);
 			name = "Assessment Ladder";
 			sourceTree = "<group>";
@@ -455,8 +491,8 @@
 			isa = PBXGroup;
 			children = (
 				76FF997F1F0629C700F3C477 /* Table.swift */,
-				762DE7751F45D0680017BCA2 /* DealerManager.swift */,
 				76FF997D1F0629A200F3C477 /* Dealer.swift */,
+				762DE7751F45D0680017BCA2 /* DealerManager.swift */,
 			);
 			name = "Casino Model";
 			sourceTree = "<group>";
@@ -506,7 +542,6 @@
 				76FF99851F0632E500F3C477 /* placeholder.png */,
 				760D16861F1870490067317A /* Model */,
 				760D16871F1870730067317A /* Views */,
-				76F049131F14946400F3934E /* playground.playground */,
 			);
 			path = CrownDealerRating;
 			sourceTree = "<group>";
@@ -670,16 +705,18 @@
 					76FF994B1F05FDD400F3C477 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Q33SL6S6SN;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					76FF995F1F05FDD400F3C477 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 76FF994B1F05FDD400F3C477;
 					};
 					76FF996A1F05FDD400F3C477 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 76FF994B1F05FDD400F3C477;
 					};
@@ -712,6 +749,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A2AE0D1FC1ABAD0069A382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +757,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A2AE0E1FC1ABB60069A382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,12 +824,16 @@
 				76998BB31F382EDF000854FE /* NetworkManager.swift in Sources */,
 				76FF99521F05FDD400F3C477 /* ViewController.swift in Sources */,
 				76FF99501F05FDD400F3C477 /* AppDelegate.swift in Sources */,
+				76560A0D1FB8661600B61B55 /* LoginViewController.swift in Sources */,
 				76B5F2EC1F066A2A0040EA73 /* AssessmentViewController.swift in Sources */,
 				766AB9DB1F2E2D87000248E3 /* DealerOptionViewController.swift in Sources */,
+				76560A131FB8A19100B61B55 /* SelectAssessmentByViewController.swift in Sources */,
 				761873411F34EC6300342A53 /* JoinClause.swift in Sources */,
 				76047FBA1F34A6E4008B1775 /* WhereClause.swift in Sources */,
+				76560A0F1FB893D100B61B55 /* MainMenuViewController.swift in Sources */,
 				764561FF1F4589C600BA6776 /* ResultsDealerInfoTableViewCell.swift in Sources */,
 				763F976E1F621D3300777E71 /* ManagerInfoTableViewCell.swift in Sources */,
+				768161841FB33D6A009D80FF /* AssessmentLadder.swift in Sources */,
 				76B5F2F21F06731A0040EA73 /* DealerImageButton.swift in Sources */,
 				760D16891F18710F0067317A /* DealerInfoTableViewCell.swift in Sources */,
 				76F0490C1F1334C500F3934E /* DealerDatabaseModel.swift in Sources */,
@@ -802,18 +845,23 @@
 				76047FB31F34A133008B1775 /* DatabaseQueryGenerator.swift in Sources */,
 				76B5F2EA1F063E230040EA73 /* RatingViewController.swift in Sources */,
 				76A997D31F08D45500DD0DDB /* Assessment.swift in Sources */,
-				76CD8E351FA220FB000E5357 /* Ladder.swift in Sources */,
+				765F30281FB96ADD0072619D /* EmployeeTableViewController.swift in Sources */,
+				76CD8E351FA220FB000E5357 /* BSTLadder.swift in Sources */,
 				76054C691F3B6592002A8ADA /* AssessmentManager.swift in Sources */,
+				7652DB8C1FBA56ED00A77737 /* AssessmentTypeTableViewController.swift in Sources */,
 				76C9E2071FAC3861003E3852 /* BSTBalancedTree.swift in Sources */,
+				76482ABE1FC1A63500DD823C /* MyProfileViewController.swift in Sources */,
 				76A997D51F08D5C800DD0DDB /* AssessmentPageViewController.swift in Sources */,
 				762DE7761F45D0680017BCA2 /* DealerManager.swift in Sources */,
 				760D168D1F1897860067317A /* SubmitTableViewCell.swift in Sources */,
 				76E5F7D61F28E4970081E180 /* DealerDatabaseQuery.swift in Sources */,
 				76998BFA1F38D530000854FE /* AssessmentResultGraphTableViewCell.swift in Sources */,
 				76047FB61F34A187008B1775 /* DatabaseQuery.swift in Sources */,
+				76560A111FB89D6B00B61B55 /* EmployeeTableViewCell.swift in Sources */,
 				7663555E1FA7279700457FFD /* AVLTree.swift in Sources */,
 				76FF99801F0629C700F3C477 /* Table.swift in Sources */,
 				769D05621F2DC918003A2D6E /* MasterViewController.swift in Sources */,
+				7652DB8E1FBAFB4C00A77737 /* AssessmentLadderViewController.swift in Sources */,
 				76FF997E1F0629A200F3C477 /* Dealer.swift in Sources */,
 				760D168F1F18BD040067317A /* AddDealerNavigationViewController.swift in Sources */,
 				76047FB81F34A1E9008B1775 /* SelectQuery.swift in Sources */,
@@ -1072,7 +1120,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJ.CrownDealerRating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1087,7 +1136,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJ.CrownDealerRating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1103,7 +1153,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CB.CrownDealerRatingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrownDealerRating.app/CrownDealerRating";
 			};
 			name = Debug;
@@ -1118,7 +1169,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CB.CrownDealerRatingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrownDealerRating.app/CrownDealerRating";
 			};
 			name = Release;
@@ -1131,7 +1183,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CB.CrownDealerRatingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CrownDealerRating;
 			};
 			name = Debug;
@@ -1144,7 +1197,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CB.CrownDealerRatingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CrownDealerRating;
 			};
 			name = Release;

@@ -19,17 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var notifier : DelegateNotifier?
-
+    var user : AssessmentLadder.Employee!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         UIApplication.shared.statusBarStyle = .lightContent
-        
-//        DealerManager.shared.downloadAllDealers()
-//        
-//        AssessmentManager.shared.downloadAllAssessments {
-//            self.notifier?.assessmentsDownloadComplete()
-//        }
         
         
         return true

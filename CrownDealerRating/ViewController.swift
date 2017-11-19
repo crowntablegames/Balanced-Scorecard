@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mainDealerImage: UIImageView!
     @IBOutlet weak var comparisonDealerImage: UIImageView!
+    
+    var tree : BSTLadder<Int>? = BSTLadder<Int>(rankedArray: [])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a ni

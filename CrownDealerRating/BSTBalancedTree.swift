@@ -8,21 +8,39 @@
 
 import Foundation
 
-public class BSTBalancedTree {
+public class BSTBalancedTree<Value> {
     
-    private(set) var root : Node?
+    private(set) var root : BSTNode<Value>?
     
-    public init() {
+    public init(rootValue: Value) {
+        let rootNode = BSTNode<Value>(rank: 1, value: rootValue)
+        self.root = rootNode
+    }
+    
+    public func insert(rank: Int, value: Value) {
         
     }
     
+    public func insert(node : BSTNode<Value>) {
+        
+    }
+    
+    
+    
 }
 
-public class Node {
+public class BSTNode<Value> {
     
-    var value : Int
+    private(set) var rank : Int
+    private(set) var value : Value
     
-    public init(value : Int) {
+    private(set) var leftChild : BSTNode?
+    private(set) var rightChild : BSTNode?
+    
+    
+    
+    public init(rank: Int, value : Value) {
+        self.rank = rank
         self.value = value
     }
 

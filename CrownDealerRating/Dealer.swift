@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Dealer {
+class Dealer  {
     
     private var id : NSNumber?
     private var firstName : String?
@@ -99,7 +99,6 @@ class Dealer {
             "firstName" : self.firstName! as NSString,
             "lastName" : self.secondName! as NSString
         ]
-        
         
         return dict
         
