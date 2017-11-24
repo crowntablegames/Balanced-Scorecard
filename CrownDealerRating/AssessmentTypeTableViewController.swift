@@ -63,34 +63,45 @@ class AssessmentTypeTableViewController: UIViewController, UITableViewDelegate, 
         let assessor = self.appDelegate.user
         let urlString = "\(self.aTypeURLString)?assessor=\(assessor!.id)&assessee=\(employee.id)"
         
-        NetworkManager.shared.getData(from: urlString, completion: { data, err in
-            
-            do {
-               self.assessmentTypes = try JSONDecoder().decode([AssessmentLadder.AssessmentType].self, from: data!)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+        let queue = DispatchQueue(label: "Download Queue")
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        queue.async {
+            NetworkManager.shared.getData(from: urlString, completion: { data, err in
+                
+                do {
+                    self.assessmentTypes = try JSONDecoder().decode([AssessmentLadder.AssessmentType].self, from: data!)
+                    DispatchQueue.main.async {
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                        self.tableView.reloadData()
+                    }
                 }
-            }
-            catch {
-                print(error.localizedDescription)
-            }
+                catch {
+                    print(error.localizedDescription)
+                }
+                
+            })
             
-        })
+        }
+        
     }
     
     func downloadAllAssessmentTypes() {
-        print("Downloading All Assessment Types")
-        NetworkManager.shared.getData(from: self.allATypeURLString, completion: {data, error in
-            do {
-                self.assessmentTypes = try JSONDecoder().decode([AssessmentLadder.AssessmentType].self, from: data!)
-            }
-            catch {
-                print(error.localizedDescription)
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        })
+        
+        let queue = DispatchQueue(label: "Download Queue")
+        queue.async {
+            NetworkManager.shared.getData(from: self.allATypeURLString, completion: {data, error in
+                do {
+                    self.assessmentTypes = try JSONDecoder().decode([AssessmentLadder.AssessmentType].self, from: data!)
+                }
+                catch {
+                    print(error.localizedDescription)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -120,8 +131,13 @@ class AssessmentTypeTableViewController: UIViewController, UITableViewDelegate, 
     // MARK: - AssessmentLadderViewDelegate
     
     func ladderUpdated() {
-        print("Ladder Updated From VC")
-        self.navigationController?.popToRootViewController(animated: true)
+        if self.assessedEmployee == nil {
+            self.downloadAllAssessmentTypes()
+        }
+        else {
+            self.downloadRemainingAssessmentTypes(for: self.assessedEmployee!)
+        }
+        //self.navigationController?.popToRootViewController(animated: true)
     }
     func assessmentCancelled() {
         

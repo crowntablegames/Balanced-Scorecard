@@ -52,6 +52,9 @@ class AssessmentLadder {
                     let assessmentTypeDictionary = json["assessmentType"] as! NSDictionary
                     self.assessmentType = AssessmentType(with: assessmentTypeDictionary)
                     let orderedNodes = json["orderedNodes"] as! [Int]
+                    for node in orderedNodes {
+                        print("Node Value: \(node)")
+                    }
                     self.ladder = BSTLadder<Int>(rankedArray: orderedNodes)
                 }
                 catch {

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class EmployeeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EmployeeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AssessmentLadderViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator : UIActivityIndicatorView!
+    @IBOutlet weak var emptyLabel : UILabel!
     
     let cellID = "userCell"
     let employeeURLString = "http://18.221.45.138/employees.php"
@@ -18,6 +20,7 @@ class EmployeeTableViewController: UIViewController, UITableViewDataSource, UITa
     var employeeArray : [AssessmentLadder.Employee] = []
     var employeeImages : [UIImage] = []
     var assessmentType : AssessmentLadder.AssessmentType?
+
 //    private var selectedEmployee : AssessmentLadder.Employee?
     
     private var reqTypeSegueID = "dealerRequiredTypeSegue"
@@ -30,7 +33,6 @@ class EmployeeTableViewController: UIViewController, UITableViewDataSource, UITa
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        UIApplication.shared.beginIgnoringInteractionEvents()
         self.updateEmployeeList()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,59 +57,101 @@ class EmployeeTableViewController: UIViewController, UITableViewDataSource, UITa
         if self.assessmentType != nil {
             urlString = "\(urlString)&type=\(self.assessmentType!.id)"
         }
-        let sem = DispatchSemaphore(value: 0)
-
-        NetworkManager.shared.getData(from: urlString, completion: {data, error in
-            do {
-                self.employeeArray = try JSONDecoder().decode([AssessmentLadder.Employee].self, from: data!)
-                sem.signal()
+        let queue = DispatchQueue(label: "Download Queue")
+        queue.async {
+            DispatchQueue.main.async {
+                UIApplication.shared.beginIgnoringInteractionEvents()
+                self.activityIndicator.startAnimating()
             }
-            catch {
-                print(error.localizedDescription)
-                sem.signal()
+            let sem = DispatchSemaphore(value: 0)
+            
+            NetworkManager.shared.getData(from: urlString, completion: {data, error in
+                do {
+                    self.employeeArray = try JSONDecoder().decode([AssessmentLadder.Employee].self, from: data!)
+                    sem.signal()
+                }
+                catch {
+                    print(error.localizedDescription)
+                    sem.signal()
+                }
+                
+            })
+            sem.wait()
+            self.employeeImages = []
+
+            for emp in self.employeeArray {
+                self.downloadImageFrom(url: emp.photoURL)
             }
             
-        })
-        sem.wait()
-        for emp in self.employeeArray {
-            downloadImageFrom(url: emp.photoURL)
+            DispatchQueue.main.async {
+                if self.employeeArray.count == 0 {
+                    print("Employee Count For Animation is 0")
+                    self.emptyLabel.isHidden = false
+                    self.emptyLabel.alpha = 1
+                    
+                }
+                else {
+                    self.emptyLabel.alpha = 0
+                    
+                }
+                UIApplication.shared.endIgnoringInteractionEvents()
+                self.activityIndicator.stopAnimating()
+                self.tableView.reloadData()
+            }
         }
-        UIApplication.shared.endIgnoringInteractionEvents()
-        self.tableView.reloadData()
+        
     }
     
     func updateRequiredEmployees() {
+        print("Updating Required Only")
         let user = self.delegate.user
         let urlString = "\(self.employeeURLString)?userID=\(user!.id)"
-        let sem = DispatchSemaphore(value: 0)
-        
-        NetworkManager.shared.getData(from: urlString, completion: {data, error in
-            do {
-                self.employeeArray = try JSONDecoder().decode([AssessmentLadder.Employee].self, from: data!)
-                sem.signal()
+        let queue = DispatchQueue(label: "Download Queue")
+        queue.async {
+            DispatchQueue.main.async {
+                UIApplication.shared.beginIgnoringInteractionEvents()
+                self.activityIndicator.startAnimating()
             }
-            catch {
-                print(error.localizedDescription)
-                sem.signal()
+            let sem = DispatchSemaphore(value: 0)
+            NetworkManager.shared.getData(from: urlString, completion: {data, error in
+                do {
+                    self.employeeArray = try JSONDecoder().decode([AssessmentLadder.Employee].self, from: data!)
+                    sem.signal()
+                }
+                catch {
+                    print(error.localizedDescription)
+                    sem.signal()
+                }
+                
+            })
+            sem.wait()
+            
+            for emp in self.employeeArray {
+                queue.sync {
+                    self.downloadImageFrom(url: emp.photoURL)
+                    sem.signal()
+                }
+                sem.wait()
             }
             
-        })
-        sem.wait()
-        for emp in self.employeeArray {
-            downloadImageFrom(url: emp.photoURL)
+            DispatchQueue.main.async {
+                UIApplication.shared.endIgnoringInteractionEvents()
+                self.activityIndicator.stopAnimating()
+                self.tableView.reloadData()
+            }
         }
-        UIApplication.shared.endIgnoringInteractionEvents()
-        self.tableView.reloadData()
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     private func downloadImageFrom(url: String) {
         let sem = DispatchSemaphore(value: 0)
         NetworkManager.shared.getData(from: url, completion: {data, error in
             if let image = UIImage(data: data!) {
+                
                     self.employeeImages.append(image)
             }
             sem.signal()
@@ -145,11 +189,22 @@ class EmployeeTableViewController: UIViewController, UITableViewDataSource, UITa
         }
         else {
             let dest = segue.destination as! AssessmentLadderViewController
+            dest.delegate = self
             dest.assessedEmployee = self.employeeArray[row]
             dest.assessmentType = self.assessmentType
         }
+       
+    }
+    
+    // MARK : - Assessment Ladder Delegate
+    func ladderUpdated() {
+        self.updateEmployeeList()
         
-        
+        //self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func assessmentCancelled() {
+        self.updateEmployeeList()
     }
     
 

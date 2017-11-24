@@ -704,7 +704,7 @@
 					};
 					76FF994B1F05FDD400F3C477 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = Q33SL6S6SN;
+						DevelopmentTeam = GXC6BD8Z22;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -1114,7 +1114,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q33SL6S6SN;
+				DEVELOPMENT_TEAM = GXC6BD8Z22;
 				INFOPLIST_FILE = CrownDealerRating/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1130,7 +1130,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q33SL6S6SN;
+				DEVELOPMENT_TEAM = GXC6BD8Z22;
 				INFOPLIST_FILE = CrownDealerRating/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

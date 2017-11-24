@@ -33,6 +33,10 @@ class AssessmentLadderViewController: UIViewController {
         super.viewDidLoad()
         self.undoButton.isEnabled = false
         self.ladder = AssessmentLadder(assessorID: appDelegate.user.id, assessmentTypeID: assessmentType.id)
+        let ar = ladder?.ladder?.inorderArray(rootNode: self.ladder?.ladder?.root)
+        for val in ar! {
+            print(val)
+        }
         downloadAssessorImage()
         self.currentNode = self.ladder?.ladder?.root
         if setCurrentRootNode() {
@@ -86,9 +90,11 @@ class AssessmentLadderViewController: UIViewController {
         }
         else {
             var rank = self.currentNode!.rank
-            if rank == 0 {
+            print("Rank Before Update \(rank)")
+            if rank < 1 {
                 rank = 1
             }
+            print("Rank After Update \(rank)")
             // Inserts the assessed employee at the ranking 1 position below the current rank.
             self.ladder?.ladder?.insert(at: rank, value: self.assessedEmployee.id)
             self.presentAlert(alertMessage: "Successfully Assessed \(assessedEmployee.id)")
@@ -104,6 +110,8 @@ class AssessmentLadderViewController: UIViewController {
         }
         else {
             let rank = self.currentNode!.rank + 1
+            print("Current Node Comparison Rank \(rank)")
+
             // Inserts the assessed employee at the ranking 1 position below the current rank.
             self.ladder?.ladder?.insert(at: rank, value: self.assessedEmployee.id)
             self.presentAlert(alertMessage: "Successfully Assessed \(assessedEmployee.id)")

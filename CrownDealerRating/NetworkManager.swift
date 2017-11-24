@@ -102,7 +102,7 @@ class NetworkManager {
     }
     
     
-    public func auth(url: String, username: String, password: String, completion: @escaping (_ successful: Bool) -> Void) {
+    public func auth(url: String, username: String, password: String, completion: @escaping (_ successful: Bool, _ error: Error?) -> Void) {
         
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = "POST"
@@ -113,14 +113,20 @@ class NetworkManager {
         
         URLSession.shared.dataTask(with: request) {data, response, error in
             
-            if let httpResponse = response as? HTTPURLResponse {
-                if httpResponse.statusCode != 200 {
-                    completion(false)
-                }
-                else {
-                    completion(true)
+            if error != nil {
+                completion(false, error)
+            }
+            else {
+                if let httpResponse = response as? HTTPURLResponse {
+                    if httpResponse.statusCode != 200 {
+                        completion(false, nil)
+                    }
+                    else {
+                        completion(true, nil)
+                    }
                 }
             }
+           
             
         }.resume()
         

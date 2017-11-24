@@ -23,7 +23,13 @@ class MainMenuViewController: UIViewController, LoginDelegate, UITableViewDataSo
 
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func logout(_ sender: Any) {
+        self.delegate.user = nil
+        performSegue(withIdentifier: self.loginSegueIdentifier, sender: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

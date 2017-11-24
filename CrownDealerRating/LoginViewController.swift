@@ -30,20 +30,26 @@ class LoginViewController: UIViewController {
                 
                 var loginSuccess : Bool = false
                 let sem = DispatchSemaphore(value: 0)
-                NetworkManager.shared.auth(url: loginURL, username: username, password: password, completion: {success in
+                NetworkManager.shared.auth(url: loginURL, username: username, password: password, completion: {success, error in
                     
-                    loginSuccess = success
-                    if(success) {
-                        print("Login is successful")
-                        sem.signal()
+                    if error != nil {
+                        self.networkAlert(message: error!.localizedDescription)
                     }
                     else {
-                        DispatchQueue.main.async {
-                            self.presentAlert(alertMessage: "Incorrect Username or Password")
+                        loginSuccess = success
+                        if(success) {
+                            print("Login is successful")
+                            sem.signal()
                         }
-                        print("Incorrect Username or Password")
-                        sem.signal()
+                        else {
+                            DispatchQueue.main.async {
+                                self.presentAlert(alertMessage: "Incorrect Username or Password")
+                            }
+                            print("Incorrect Username or Password")
+                            sem.signal()
+                        }
                     }
+                    
                 })
                 sem.wait()
                 print("Login Success \(loginSuccess)")
@@ -108,6 +114,20 @@ class LoginViewController: UIViewController {
         self.loginButton.layer.borderColor = UIColor.white.cgColor
         self.loginButton.layer.borderWidth = 2
         self.loginButton.layer.cornerRadius = 5
+    }
+    
+    private func networkAlert(message : String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Wifi Settings", style: .default, handler: {(action) in
+            
+            alert.dismiss(animated: true, completion: nil)
+            UIApplication.shared.open(URL(string: "App-Prefs:root=WIFI")!)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {(action) in
+            
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
