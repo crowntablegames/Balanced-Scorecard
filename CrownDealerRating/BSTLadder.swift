@@ -107,7 +107,7 @@ public class LadderNode<Value> {
     fileprivate(set) public var rank : Int
     fileprivate(set) public var value : Value
     
-    fileprivate(set) weak var parent : LadderNode?
+    fileprivate(set) public var parent : LadderNode?
     fileprivate(set) public var leftChild : LadderNode?
     fileprivate(set) public var rightChild : LadderNode?
     
@@ -201,11 +201,13 @@ public class LadderNode<Value> {
         
         if rightChildArray.count > 0 {
             self.rightChild = LadderNode(rank: 0, value: rightChildArray[0].value)
+            self.rightChild?.parent = self
             self.rightChild?.recursiveBuild(rankedValues: rightChildArray)
         }
         if leftChildArray.count > 0 {
             
             self.leftChild = LadderNode(rank: 0, value: leftChildArray[0].value)
+            self.leftChild?.parent = self
             self.leftChild?.recursiveBuild(rankedValues: leftChildArray)
         }
     }

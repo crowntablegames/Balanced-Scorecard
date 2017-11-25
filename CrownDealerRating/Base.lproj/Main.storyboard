@@ -575,7 +575,11 @@
                                                 <action selector="cancelAssessment" destination="NaO-WU-qYd" id="zCY-o6-UUh"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="undo" id="nor-VE-Z67"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="undo" id="nor-VE-Z67">
+                                            <connections>
+                                                <action selector="undo" destination="NaO-WU-qYd" id="ev0-3t-bza"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

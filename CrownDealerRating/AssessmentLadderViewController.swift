@@ -58,6 +58,28 @@ class AssessmentLadderViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func undo() {
+        print("Current Node Value: \(self.currentNode!.value)")
+        if let parent = self.currentNode?.parent {
+            print("Parent Value: \(parent.value)")
+            self.currentNode = parent
+            self.downloadEmployee(from: parent.value)
+            self.updateUndoButton()
+        }
+        else {
+            print("No Parent")
+        }
+    }
+    
+    private func updateUndoButton() {
+        if self.currentNode?.parent != nil {
+            self.undoButton.isEnabled = true
+        }
+        else {
+            self.undoButton.isEnabled = false
+        }
+    }
+    
     private func updateLadder(completion: @escaping () ->Void) {
         // TODO - Write code that sends the new ordered node list to the database.
         print("Ladder is \(self.ladder?.ladder)")
@@ -87,6 +109,8 @@ class AssessmentLadderViewController: UIViewController {
         if let rightChild = self.currentNode?.rightChild {
             self.currentNode = rightChild
             self.downloadEmployee(from: rightChild.value)
+            self.updateUndoButton()
+
         }
         else {
             var rank = self.currentNode!.rank
@@ -97,7 +121,7 @@ class AssessmentLadderViewController: UIViewController {
             print("Rank After Update \(rank)")
             // Inserts the assessed employee at the ranking 1 position below the current rank.
             self.ladder?.ladder?.insert(at: rank, value: self.assessedEmployee.id)
-            self.presentAlert(alertMessage: "Successfully Assessed \(assessedEmployee.id)")
+            self.confirmAlert()
         }
     }
     
@@ -106,6 +130,7 @@ class AssessmentLadderViewController: UIViewController {
         if let leftChild = self.currentNode?.leftChild {
             self.currentNode = leftChild
             self.downloadEmployee(from: leftChild.value)
+            self.updateUndoButton()
 
         }
         else {
@@ -114,7 +139,7 @@ class AssessmentLadderViewController: UIViewController {
 
             // Inserts the assessed employee at the ranking 1 position below the current rank.
             self.ladder?.ladder?.insert(at: rank, value: self.assessedEmployee.id)
-            self.presentAlert(alertMessage: "Successfully Assessed \(assessedEmployee.id)")
+            self.confirmAlert()
         }
     }
  
@@ -191,6 +216,23 @@ class AssessmentLadderViewController: UIViewController {
         }
     }
     
+    func confirmAlert() {
+        let alertController = UIAlertController(title: nil, message: "Confirm Assessment Submission", preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "Confirm", style: .default) { action in
+            self.presentAlert(alertMessage: "Successfully Assessed \(self.assessedEmployee.id)")
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            
+        }
+        alertController.addAction(OKAction)
+        alertController.addAction(cancel)
+        
+        self.present(alertController, animated: true) {
+            print("Presenting Alert View Controller")
+            // ...
+        }
+    }
     private func dismissScreen() {
         self.updateLadder(completion: {
             print("Updated Ladder")
